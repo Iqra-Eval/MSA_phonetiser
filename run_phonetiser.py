@@ -67,9 +67,10 @@ def get_phoneme(batch):
         try:
             # We are interested in the list of phonemes (index 1)
             # The original code joined with " " and replaced "sil" with "<sil>"
-            phonemes = " ".join(phonetise(cleaned_text)[1]).replace("sil", "<sil>")
+            phonemes = " ".join(phonetise(cleaned_text)[1]).replace("sil", "")
             # Original code added "<sil> " prefix. Let's maintain that.
-            transcription = "<sil> " + phonemes
+            # transcription = "<sil> " + phonemes
+            transcription = phonemes
             phoneme_sequences.append(transcription)
         except Exception as e:
             print(f"Error phonetising text: '{text}'. Error: {e}", file=sys.stderr)
