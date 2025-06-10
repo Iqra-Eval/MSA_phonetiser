@@ -31,7 +31,7 @@ This Python script phonetises Arabic text from various sources and outputs the p
 ## Usage
 Run the script with command-line arguments:
 ```
-python phonetiser_tool.py --input_type [huggingface|csv|text] \
+python run_phonetiser.py --input_type [huggingface|csv|text] \
                          --input_path <input_data> \
                          --output_type [csv|text|huggingface] \
                          [--output_path <output_file>] \
@@ -54,13 +54,13 @@ python phonetiser_tool.py --input_type [huggingface|csv|text] \
 ## Examples
 1. **Hugging Face to CSV**
    ```
-   python phonetiser_tool.py --input_type huggingface --input_path "IqraEval/Iqra_train" \
+   python run_phonetiser.py --input_type huggingface --input_path "IqraEval/Iqra_train" \
        --hf_text_column "tashkeel_sentence" --output_type csv --output_path "output_phonemes.csv"
    ```
 
 2. **Hugging Face to Hugging Face Hub**
    ```
-   python phonetiser_tool.py --input_type huggingface --input_path "IqraEval/Iqra_train" \
+   python run_phonetiser.py --input_type huggingface --input_path "IqraEval/Iqra_train" \
        --hf_text_column "tashkeel_sentence" --output_type huggingface \
        --hf_output_repo_id "your-huggingface-username/my-phonetised-arabic-dataset"
    ```
@@ -69,7 +69,7 @@ python phonetiser_tool.py --input_type [huggingface|csv|text] \
 3. **Custom CSV to Text File**
    ```
    # my_texts.csv: record_id,arabic_sentence_data
-   python phonetiser_tool.py --input_type csv --input_path "sample.csv" \
+   python run_phonetiser.py --input_type csv --input_path "sample.csv" \
        --column_id "record_id" --column_text "arabic_sentence_data" \
        --output_type text --output_path "phoneme_output.txt"
    ```
@@ -77,7 +77,7 @@ python phonetiser_tool.py --input_type [huggingface|csv|text] \
 4. **Plain Text File to CSV**
    ```
    # input_sentences.txt: one sentence per line
-   python phonetiser_tool.py --input_type text --input_path "input_sentences.txt" \
+   python run_phonetiser.py --input_type text --input_path "input_sentences.txt" \
        --output_type csv --output_path "phonetised_from_text.csv"
    ```
 
