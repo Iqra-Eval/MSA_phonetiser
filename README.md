@@ -16,7 +16,7 @@ This Python script phonetises Arabic text from various sources and outputs the p
 ## Installation
 1. Clone the repository:
    ```
-   git clone https://github.com/mostafashahin/MSA_phonetiser.git
+   git clone https://github.com/Iqra-Eval/MSA_phonetiser.git
    cd MSA_phonetiser
    ```
 2. Install packages:
